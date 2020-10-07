@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".final_process.DetailNilaiFinalProcess">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/shadowsintolight"
+        android:padding="16dp"
+        android:text="Detail Nilai Final Process (Data Realtime)"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/layout_date"
+        android:layout_below="@+id/tv_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+    <include
+        layout="@layout/layout_quality_parameter"
+        android:layout_below="@+id/cv_date"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <include
+        layout="@layout/btn_monitoring"
+        android:layout_below="@+id/cv_quality_parameter"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="32dp"
+        android:layout_centerInParent="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_prediction_viscosity_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btn_monitoring">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:text="Prediksi"
+            android:textSize="16sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
